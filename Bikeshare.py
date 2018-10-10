@@ -43,17 +43,17 @@ def get_time_period():
 
 def get_month():
     month=input("On which filter do you want to apply the filter,January,February,March,April,May,June\n'").lower()
-    if(month=='January'):
+    if(month=='january'):
        return('01')
-    elif(month=='February'):
+    elif(month=='february'):
        return('02')
-    elif(month=='March'):
+    elif(month=='march'):
        return('03')
-    elif(month=='April'):
+    elif(month=='april'):
        return('04')
-    elif(month=='May'):
+    elif(month=='may'):
        return('05')    
-    elif(month=='June'):
+    elif(month=='june'):
        return('06')
     else:
        print("Sorry!!!but you have entered an invalid input so please recheck the spelling and input again correctly")
@@ -62,19 +62,19 @@ def get_month():
 
 def get_day():
        day=input("On which day you want to apply the filter,Monday,Tuesday,Wednesday,Thursday,Fridday,Saturday?").lower()
-       if(day=='Monday'):
+       if(day=='monday'):
            return(0)
-       elif(day=='Tuesday'):
+       elif(day=='tuesday'):
            return(1)
-       elif(day=='Wednesday'):
+       elif(day=='wednesday'):
            return(2)
-       elif(day=='Thursday'):
+       elif(day=='thursday'):
            return(3)
-       elif(day=='Friday'):
+       elif(day=='friday'):
            return(4)
-       elif(day=='Saturday'):
+       elif(day=='saturday'):
            return(5)
-       elif(day=='Sunday'):
+       elif(day=='sunday'):
            return(6)
        else:
            print("You have inputted an wrong day.Try Again")
