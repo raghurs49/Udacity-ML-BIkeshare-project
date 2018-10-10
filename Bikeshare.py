@@ -17,13 +17,13 @@ def get_city():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city=input("Please input the name of the city of which you want to explore bikeshare data among Chicago,New York,Washington:")
-    if((city=='chicago')or(city=='Chicago')):
+    
+    city=input("Please input the name of the city of which you want to explore bikeshare data among Chicago,New York,Washington:").lower()
+    if(city=='chicago'):
         return 'chicago.csv'
-    elif((city=='New York')or(city=='new york')or(city=='newyork')or(city=='NewYork')):
+    elif(city=='new york'):
         return 'new_york_city.csv'
-    elif((city=='Washington')or(city=='washington')):
+    elif(city=='washington'):
         return 'chicago.csv'
     else:
         print("You have not wriiten the appropriate spelling of the city or you have entered an invalid city name.Retry!!!!!!")
@@ -40,9 +40,9 @@ def get_time_period():
     else:
         print("You have entered an inappropriate input..Please input again!!!!")
         return get_time_period()
-# TO DO:- get user input for month (all, january, february, ... , june)
+
 def get_month():
-    month=input("On which filter do you want to apply the filter,January,February,March,April,May,June\n'").title()
+    month=input("On which filter do you want to apply the filter,January,February,March,April,May,June\n'").lower()
     if(month=='January'):
        return('01')
     elif(month=='February'):
@@ -59,9 +59,9 @@ def get_month():
        print("Sorry!!!but you have entered an invalid input so please recheck the spelling and input again correctly")
        return get_month()   
     
-# TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+
 def get_day():
-       day=input("On which day you want to apply the filter,Monday,Tuesday,Wednesday,Thursday,Fridday,Saturday?").title()
+       day=input("On which day you want to apply the filter,Monday,Tuesday,Wednesday,Thursday,Fridday,Saturday?").lower()
        if(day=='Monday'):
            return(0)
        elif(day=='Tuesday'):
